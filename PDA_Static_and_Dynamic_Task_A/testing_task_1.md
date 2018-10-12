@@ -10,10 +10,11 @@
 
 require_relative('card.rb') # no path (though should be fine here)
 class CardGame
-
+## nothing being initialized so what do you call the method on? need to generate an object, perhaps with an array of cards inside it!
 
   def checkforAce(card) # shouldn't need to pass this a card as you call it on a card object
-    # poor method syntax, should be snake case
+    # poor method syntax, should be snake case with no caps
+
     if card.value = 1 # need double == to assert whether it is equal
       return true
     else
