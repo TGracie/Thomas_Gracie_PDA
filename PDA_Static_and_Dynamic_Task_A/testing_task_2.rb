@@ -13,14 +13,7 @@ class CardGame
 
   attr_reader :card1, :card2, :card3
 
-  def initialize(card1, card2, card3)
-    @ace = card1
-    @ten = card2
-    @nine = card3
-  end
-
-
-    def check_for_ace(card)
+    def self.check_for_ace(card)
         if card.value == 1
           return true
         else
@@ -28,7 +21,7 @@ class CardGame
         end
     end
 
-    def highest_card
+    def self.highest_card(card1, card2)
       if card1.value > card2.value
         return card1.value
       else
@@ -37,10 +30,10 @@ class CardGame
     end
 
     def self.cards_total(cards)
-      total
+      total = 0
       for card in cards
         total += card.value
-      return "You have a total of" + total
       end
+      return "You have a total of " + "#{total}"
     end
 end

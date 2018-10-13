@@ -10,19 +10,24 @@ class CardGameTest < MiniTest::Test
     @ace = Card.new("spade", 1)
     @ten = Card.new("diamond", 10)
     @nine = Card.new("diamond", 9)
-
-    @game = CardGame.new(@ace, @ten, @nine)
+    @cards = [@nine, @ten, @ace]
   end
 
   def test_check_for_ace
     # binding.pry
-    var = @game.check_for_ace(@ace)
-    assert_equal(true, var)
+
+    test_1 = CardGame.check_for_ace(@ace)
+    assert_equal(true, test_1)
   end
 
   def test_highest_card
-    # binding.pry
-    assert_equal(10, @game.highest_card)
+    test_2 = CardGame.highest_card(@ten, @nine)
+    assert_equal(10, test_2)
+  end
+
+  def test_cards_total
+    test_3 = CardGame.cards_total(@cards)
+    assert_equal("You have a total of 20", test_3)
   end
 
 end ## class end
