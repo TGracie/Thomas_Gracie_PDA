@@ -26,6 +26,7 @@ class CardGame
 
   dif highest_card(card1 card2)
   # should be def not dif here, also missing "," between arguments
+## what if they're equal?  need an elsif statement to cover that off
     if card1.value > card2.value
       return card.name # which card? Also not a valid method to call needs either suit or value
     else

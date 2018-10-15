@@ -14,8 +14,6 @@ class CardGameTest < MiniTest::Test
   end
 
   def test_check_for_ace
-    # binding.pry
-
     test_1 = CardGame.check_for_ace(@ace)
     assert_equal(true, test_1)
   end

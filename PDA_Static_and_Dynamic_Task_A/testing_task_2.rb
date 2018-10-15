@@ -5,10 +5,6 @@
 
 require_relative('./card.rb')
 
-@ace = Card.new("spade", 1)
-@ten = Card.new("diamon", 10)
-@nine = Card.new("diamon", 9)
-
 class CardGame
 
   attr_reader :card1, :card2, :card3
@@ -24,6 +20,8 @@ class CardGame
     def self.highest_card(card1, card2)
       if card1.value > card2.value
         return card1.value
+      elsif card1.value = card2.value
+        return "Cards are equal"
       else
         card2.value
       end
