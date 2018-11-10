@@ -13,6 +13,10 @@ class CardGameTest < MiniTest::Test
     @cards = [@nine, @ten, @ace]
   end
 
+  # def test_check_for_ace(card)
+  #   assert_equal(true, (CardGame.new(@ace)).check_for_ace(@ace) )
+  # end
+
   def test_check_for_ace
     test_1 = CardGame.check_for_ace(@ace)
     assert_equal(true, test_1)

@@ -7,8 +7,6 @@ require_relative('./card.rb')
 
 class CardGame
 
-  attr_reader :card1, :card2, :card3
-
     def self.check_for_ace(card)
         if card.value == 1
           return true
