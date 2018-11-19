@@ -20,8 +20,12 @@ Calculator.prototype = {
   },
 
   divide: function(number){
+    if (number === 0){
+      this.runningTotal = NaN;
+      this.previousTotal = NaN;
+    } else {
     this.runningTotal = parseFloat(this.previousTotal) / parseFloat(number);
-  },
+  }},
 
   numberClick: function(number) {
 

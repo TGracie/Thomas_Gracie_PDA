@@ -62,7 +62,15 @@ describe('calculator', function () {
   });
 
   it('should clear the running total without affecting the calculation', function(){
-    
+    let five = calculator.numberClick(5);
+    let add = calculator.operatorClick('+');
+    let four = calculator.numberClick(4);
+    let clr = calculator.clearClick();
+    let plus = calculator.operatorClick('+');
+    let one = calculator.numberClick(1);
+    let equals = calculator.operatorClick('=');
+
+    assert.equal(calculator.previousTotal, 6)
   });
 
 });
