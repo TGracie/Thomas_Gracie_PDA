@@ -45,4 +45,24 @@ describe('calculator', function () {
     assert.equal(calculator.runningTotal, 3);
   });
 
+  it('should concatenate multiple number button clicks', function(){
+    let one = calculator.numberClick(1);
+    let two = calculator.numberClick(2);
+
+    assert.equal(calculator.runningTotal, 12);
+  });
+
+  it('should chain multiple operations together', function(){
+    let five = calculator.numberClick(5);
+    let add = calculator.operatorClick('+');
+    let four = calculator.numberClick(4);
+    let equals = calculator.operatorClick('=');
+
+    assert.equal(calculator.runningTotal, 9);
+  });
+
+  it('should clear the running total without affecting the calculation', function(){
+    
+  });
+
 });
